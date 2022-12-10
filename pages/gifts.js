@@ -4,11 +4,11 @@ import { useState } from "react";
 import styles from "./index.module.css";
 
 export default function Home() {
-  const [gender, setGender] = useState("femme");
-  const [age, setAge] = useState(23);
-  const [hobbies, setHobbies] = useState("dessiner, voyager, coder");
-  const [priceMin, setPriceMin] = useState(50);
-  const [priceMax, setPriceMax] = useState(500);
+  const [gender, setGender] = useState("");
+  const [age, setAge] = useState();
+  const [hobbies, setHobbies] = useState("");
+  const [priceMin, setPriceMin] = useState();
+  const [priceMax, setPriceMax] = useState();
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState();
 
@@ -71,7 +71,7 @@ export default function Home() {
             type="number"
             min={1}
             name="priceMin"
-            placeholder="Veuillez saisir le prix min."
+            placeholder="0"
             value={priceMin}
             onChange={(e) => setPriceMin(Number.parseInt(e.target.value))}
           /></div>
@@ -81,7 +81,7 @@ export default function Home() {
             type="number"
             min={1}
             name="priceMax"
-            placeholder="Veuillez saisir le prix max."
+            placeholder="0"
             value={priceMax}
             onChange={(e) => setPriceMax(Number.parseInt(e.target.value))}
           /></div>
