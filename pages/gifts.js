@@ -63,7 +63,7 @@ export default function Home() {
   const getWithExpiry = (key) => {
     const itemStr = localStorage.getItem(key)
 
-    // if the item doesn't exist, return null
+    // if the item doesn't exist, return success
     if (!itemStr) {
       setWithExpiry(key, 4, 7200000)
       return {"status":"success"}
