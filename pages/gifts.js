@@ -99,7 +99,7 @@ export default function Home() {
 
   }
   const notify = () => toast(`Ho ho ho! 
-    Vous avez atteint votre quota de demandes pour aujourd\'hui. 👀 
+    Vous avez atteint votre quota de demandes. 👀 
     Ne vous inquiétez pas : vous pouvez réessayer dans 2H ! 😉`, {
     position: "top-right",
     autoClose: 10000,
